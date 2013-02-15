@@ -9,26 +9,16 @@
 #import "PlayingCard.h"
 
 @interface PlayingCard ()
-
 @end
-
 
 @implementation PlayingCard
 
-@synthesize suit = _suit;
-
-#pragma mark - Instance methods
-//Playing cards are caracterized by their rank and suit
 - (NSString *)contents
 {
-    NSArray  *rankStrings = [PlayingCard rankStrings];
-    return [rankStrings[self.rank] stringByAppendingString:self.suit];
+    return [[PlayingCard rankStrings][self.rank] stringByAppendingString:self.suit];
 }
 
-- (NSString *)description
-{
-    return self.contents;
-}
+@synthesize suit = _suit;
 
 - (NSString *)suit
 {
@@ -49,44 +39,21 @@
     }
 }
 
-//Matches actual card to other card(s) by rank and suit
-//Match points : rank =4, suit = 1, both = 4 + 1 = 5
 - (NSInteger)match:(NSArray *)otherCards
 {
-    NSInteger rankScore = [self matchRank:otherCards];
-    NSInteger suitScore = [self matchSuit:otherCards];
-    return rankScore + suitScore;
-}
-
-//Matches actual card to other card(s) by rank only
-- (NSInteger)matchRank:(NSArray *)otherCards
-{
-    NSInteger rankScore = 4;
-    for (PlayingCard *otherCard in otherCards) {
-        if (!([otherCard isKindOfClass:[PlayingCard class]]) ||
-            !(otherCard.rank == self.rank)) {
-            rankScore = 0;
-            break;
+    NSInteger score = 0;
+    
+    if ([otherCards count] == 1) {
+        PlayingCard *otherCard = [otherCards lastObject];
+        if ([otherCard.suit isEqualToString:self.suit]) {
+            score = 1;
+        } else if (otherCard.rank == self.rank) {
+            score = 4;
         }
     }
-    return rankScore;
+    return score;
 }
 
-//Matches actual card to other card(s) by suit only
-- (NSInteger)matchSuit:(NSArray *)otherCards;
-{
-    NSInteger suitScore = 1;
-    for (PlayingCard *otherCard in otherCards) {
-        if (!([otherCard isKindOfClass:[PlayingCard class]]) ||
-            ![otherCard.suit isEqualToString:self.suit]) {
-            suitScore = 0;
-            break;
-        }
-    }
-    return suitScore;
-}
-
-#pragma mark - Class methods
 + (NSArray *)rankStrings
 {
     return @[@"?", @"A", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"J", @"Q", @"K"];

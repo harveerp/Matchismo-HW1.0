@@ -9,11 +9,8 @@
 #import "Deck.h"
 
 @interface Deck()
-
 @property (nonatomic, strong) NSMutableArray *cards;
-
 @end
-
 
 @implementation Deck
 
@@ -35,7 +32,7 @@
 {
     id randomCard = nil;
     if (self.cards.count) {
-        NSInteger index = arc4random() % self.cards.count;
+        unsigned index = arc4random() % self.cards.count;
         randomCard = self.cards[index];
         [self.cards removeObjectAtIndex:index];
     }

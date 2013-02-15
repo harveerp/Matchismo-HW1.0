@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040E1C1B16CC335300E8B2F9 /* cardBack_red_54x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E1C1916CC335300E8B2F9 /* cardBack_red_54x64.png */; };
-		040E1C1C16CC335300E8B2F9 /* cardBack_red_108x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E1C1A16CC335300E8B2F9 /* cardBack_red_108x128.png */; };
-		040E1C1E16CC392E00E8B2F9 /* deckback.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E1C1D16CC392E00E8B2F9 /* deckback.png */; };
 		0463AD4A16CA883400A638E4 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463AD4916CA883400A638E4 /* CardMatchingGame.m */; };
 		04ADE42D16C8F53D002E6EFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADE42C16C8F53D002E6EFC /* UIKit.framework */; };
 		04ADE42F16C8F53D002E6EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADE42E16C8F53D002E6EFC /* Foundation.framework */; };
@@ -29,9 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040E1C1916CC335300E8B2F9 /* cardBack_red_54x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBack_red_54x64.png; sourceTree = "<group>"; };
-		040E1C1A16CC335300E8B2F9 /* cardBack_red_108x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBack_red_108x128.png; sourceTree = "<group>"; };
-		040E1C1D16CC392E00E8B2F9 /* deckback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deckback.png; sourceTree = "<group>"; };
 		0463AD4816CA883400A638E4 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
 		0463AD4916CA883400A638E4 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 		04ADE42916C8F53D002E6EFC /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,9 +109,6 @@
 		04ADE43316C8F53D002E6EFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				040E1C1D16CC392E00E8B2F9 /* deckback.png */,
-				040E1C1916CC335300E8B2F9 /* cardBack_red_54x64.png */,
-				040E1C1A16CC335300E8B2F9 /* cardBack_red_108x128.png */,
 				04ADE43B16C8F53D002E6EFC /* CardGameAppDelegate.h */,
 				04ADE43C16C8F53D002E6EFC /* CardGameAppDelegate.m */,
 				04ADE43416C8F53D002E6EFC /* Matchismo-Info.plist */,
@@ -222,9 +213,6 @@
 				04ADE44116C8F53D002E6EFC /* Default@2x.png in Resources */,
 				04ADE44316C8F53D002E6EFC /* Default-568h@2x.png in Resources */,
 				04ADE44616C8F53D002E6EFC /* MainStoryboard.storyboard in Resources */,
-				040E1C1B16CC335300E8B2F9 /* cardBack_red_54x64.png in Resources */,
-				040E1C1C16CC335300E8B2F9 /* cardBack_red_108x128.png in Resources */,
-				040E1C1E16CC392E00E8B2F9 /* deckback.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

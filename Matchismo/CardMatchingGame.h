@@ -7,23 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PlayingCardDeck.h"
+#import "Deck.h"
 
 @interface CardMatchingGame : NSObject
 
-typedef enum NSInteger {
-    TwoCardsMatchGameMode  = 2,
-    ThreeCardsMatchGameMode = 3,
-} GameMode;
-
-@property (nonatomic) GameMode selectedGameMode;
-@property (nonatomic, readonly) int score;
-@property (readonly, strong, nonatomic) NSMutableArray *flipHistory;
-
-- (GameMode)selectedGameMode;
 - (id)initWithCardCount:(NSUInteger)cardCount
               usingDeck:(Deck *)deck;
 - (Card *)cardAtIndex:(NSUInteger)index;
 - (void)flipCardAtIndex:(NSUInteger)index;
+
+@property (nonatomic, readonly) int score;
 
 @end

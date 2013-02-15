@@ -7,10 +7,10 @@
 //
 
 #import "PlayingCardDeck.h"
+#import "PlayingCard.h"
 
 @implementation PlayingCardDeck
 
-//Generates a deck of all possible playing cards combinations
 - (id)init
 {
     self = [super init];
